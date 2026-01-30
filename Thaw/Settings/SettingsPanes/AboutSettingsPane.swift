@@ -86,7 +86,7 @@ struct AboutSettingsPane: View {
                         .font(.system(size: 80))
                         .foregroundStyle(.primary)
 
-                    Text("Version \(Constants.versionString)")
+                    Text("Version \(Constants.versionString) (\(Constants.buildString))")
                         .font(.system(size: 15))
                         .foregroundStyle(.secondary)
 
