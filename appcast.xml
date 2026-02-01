@@ -3,13 +3,73 @@
     <channel>
         <title>Thaw</title>
         <item>
+            <title>1.0.0-beta.2</title>
+            <pubDate>Sun, 01 Feb 2026 16:53:37 +0100</pubDate>
+            <sparkle:channel>beta</sparkle:channel>
+            <sparkle:version>2</sparkle:version>
+            <sparkle:shortVersionString>1.0.0-beta.2</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description><![CDATA[<h3>1.0.0-beta.2: Aesthetic & Stability Update</h3>
+
+<p><strong>New Features:</strong></p>
+<ul>
+  <li>
+    <strong>Ice Migration:</strong> You can now import your old Ice settings,
+    including your custom control item positions.
+  </li>
+  <li>
+    <strong>New Branding:</strong> Full transition to the "Thaw" aesthetic,
+    featuring a brand-new app icon.
+  </li>
+  <li>
+    <strong>Better Shortcuts:</strong> Added <code>Command + ,</code> to quickly
+    open settings directly from the search window.
+  </li>
+</ul>
+
+<p><strong>Improvements & Fixes:</strong></p>
+<ul>
+  <li>
+    <strong>Smarter Hiding:</strong> Enhanced the "Smart Rehide" strategy with
+    better focus monitoring and auto-hiding menu bar support.
+  </li>
+  <li>
+    <strong>Reliability:</strong> Improved menu open detection to ensure the
+    menu bar behaves predictably.
+  </li>
+  <li>
+    <strong>Cursor Fix:</strong> Resolved an issue where the cursor could
+    occasionally stay hidden due to tracking errors.
+  </li>
+</ul>
+]]></description>
+            <enclosure url="https://github.com/stonerl/Thaw/releases/download/1.0.0-beta.2/Thaw_1.0.0-beta.2.zip" length="3683921" type="application/octet-stream" sparkle:edSignature="fs0UK4anyc7tqT0txGa3QsWc5GmY9sGl4C8iY66a3aecoIV/y/PGzmmt2PD0L41Wbc8AhKgoG4WzbnbIADPmBQ=="/>
+            <sparkle:deltas>
+                <enclosure url="https://github.com/stonerl/Thaw/releases/download/1.0.0-beta.2/Thaw2-1.delta" sparkle:deltaFrom="1" length="787306" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="860560" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="233epzHPTgzEMd9kP3CHNGHUYA7dKc5vAoyo4L/hOArY1cKiyQ9GVujrRRpLkr2J2b+bzDiRsk5nzWuZ8LNfDA=="/>
+            </sparkle:deltas>
+        </item>
+        <item>
             <title>1.0.0-beta.1</title>
             <pubDate>Fri, 30 Jan 2026 03:38:29 +0100</pubDate>
             <sparkle:channel>beta</sparkle:channel>
             <sparkle:version>1</sparkle:version>
             <sparkle:shortVersionString>1.0.0-beta.1</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <enclosure url="https://github.com/stonerl/Thaw/releases/download/1.0.0-beta.1/Thaw.zip" length="3964528" type="application/octet-stream" sparkle:edSignature="oOZHzLIVx35jxRBrfKA1y37GLmAfaKCB1ZE/b0Qt18nLFavzRcbm2WiOe0O8NUk3k/t4RhBdGCZByATw/08xDA=="/>
+            <enclosure url="https://github.com/stonerl/Thaw/releases/download/1.0.0-beta.2/Thaw_1.0.0-beta.1.zip" length="3964528" type="application/octet-stream" sparkle:edSignature="oOZHzLIVx35jxRBrfKA1y37GLmAfaKCB1ZE/b0Qt18nLFavzRcbm2WiOe0O8NUk3k/t4RhBdGCZByATw/08xDA=="/>
+            <description><![CDATA[<h3>1.0.0-beta.1: The Big Thaw</h3>
+<ul>
+  <li>
+    <strong>Initial Fork:</strong> Forked from Ice and integrated some bug
+    fixes.
+  </li>
+  <li><strong>Branding:</strong> Renamed app to Thaw and updated strings.</li>
+  <li>
+    <strong>Bundle ID:</strong> Updated to <code>com.stonerl.Thaw</code> for
+    independent Sparkle updates.
+  </li>
+  <li><strong>Clean Up:</strong> Removed Ice-specific links.</li>
+</ul>
+]]></description>
         </item>
     </channel>
 </rss>
