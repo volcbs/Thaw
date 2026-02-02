@@ -3,6 +3,67 @@
     <channel>
         <title>Thaw</title>
         <item>
+            <title>1.0.0-beta.3</title>
+            <pubDate>Mon, 02 Feb 2026 15:18:39 +0100</pubDate>
+            <sparkle:channel>beta</sparkle:channel>
+            <sparkle:version>3</sparkle:version>
+            <sparkle:shortVersionString>1.0.0-beta.3</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description><![CDATA[<h3>1.0.0-beta.3: Polishing the Interface</h3>
+<p><strong>New Features:</strong></p>
+<ul>
+  <li>
+    <strong>Sparkle Consent:</strong> Added a new in-app consent sheet for
+    updates, giving you more control over how and when Thaw checks for new
+    versions.
+  </li>
+  <li>
+    <strong>Display Management:</strong> Thaw now automatically refreshes its
+    state and restarts when you connect a new monitor to ensure everything stays
+    aligned.
+  </li>
+</ul>
+
+<p><strong>Improvements & Fixes:</strong></p>
+<ul>
+  <li>
+    <strong>Menu Bar Reliability:</strong> Improved the "rehide" logic with a
+    retry mechanism to ensure temporary items don't get stranded in the visible
+    section.
+  </li>
+  <li>
+    <strong>Appearance Editor:</strong> Restored the editor as a top-anchored
+    popover that automatically resizes when menu bar shapes are enabled and
+    focuses immediately upon opening.
+  </li>
+  <li>
+    <strong>Notched Displays:</strong> Fixed a layout issue on secondary notched
+    screens to prevent false "not enough room" alerts.
+  </li>
+  <li>
+    <strong>Icon Stability:</strong> Resolved an issue where icons could appear
+    duplicated in the menu bar and ensured the "Ice Cube" remains the default
+    icon.
+  </li>
+  <li>
+    <strong>Performance:</strong> Optimized the icon cache to refresh
+    immediately after rapid clicks and added a background check to keep newly
+    inserted macOS icons visible.
+  </li>
+  <li>
+    <strong>Clean Up:</strong> Successfully removed the final remaining branding
+    references from the user interface and improved the reliability of importing
+    old hotkey settings.
+  </li>
+</ul>
+]]></description>
+            <enclosure url="https://github.com/stonerl/Thaw/releases/download/1.0.0-beta.3/Thaw_1.0.0-beta.3.zip" length="3733252" type="application/octet-stream" sparkle:edSignature="FaxG5ucO2aehxr0R5cgUKpAkmPvtjPKelX1Jd+uJCwPIGP2IKKI9zEo60gb+wZHR/kzy68H7MJE+ZsGdhElsAA=="/>
+            <sparkle:deltas>
+                <enclosure url="https://github.com/stonerl/Thaw/releases/download/1.0.0-beta.3/Thaw3-2.delta" sparkle:deltaFrom="2" length="436838" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="860560" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="QgBArhesE4HhS4rjGp7Ttlx6V89qm6xxNwdUYTpysrxZUsnt//Ah1iy/PJz9cxfwtqec2l/0N9if9BOYYaSkCQ=="/>
+                <enclosure url="https://github.com/stonerl/Thaw/releases/download/1.0.0-beta.3/Thaw3-1.delta" sparkle:deltaFrom="1" length="910358" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="860560" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="UK2DGuhV9ilqCMbBMrIX/O2+1wBJyYLEmTV+5E3guoBs05iOeMhhtbq54/QsnV7cvQ30S5ohd30zwR8h8RcIDQ=="/>
+            </sparkle:deltas>
+        </item>
+        <item>
             <title>1.0.0-beta.2</title>
             <pubDate>Sun, 01 Feb 2026 16:53:37 +0100</pubDate>
             <sparkle:channel>beta</sparkle:channel>
@@ -43,7 +104,7 @@
   </li>
 </ul>
 ]]></description>
-            <enclosure url="https://github.com/stonerl/Thaw/releases/download/1.0.0-beta.2/Thaw_1.0.0-beta.2.zip" length="3683921" type="application/octet-stream" sparkle:edSignature="fs0UK4anyc7tqT0txGa3QsWc5GmY9sGl4C8iY66a3aecoIV/y/PGzmmt2PD0L41Wbc8AhKgoG4WzbnbIADPmBQ=="/>
+            <enclosure url="https://github.com/stonerl/Thaw/releases/download/1.0.0-beta.3/Thaw_1.0.0-beta.2.zip" length="3683921" type="application/octet-stream" sparkle:edSignature="fs0UK4anyc7tqT0txGa3QsWc5GmY9sGl4C8iY66a3aecoIV/y/PGzmmt2PD0L41Wbc8AhKgoG4WzbnbIADPmBQ=="/>
             <sparkle:deltas>
                 <enclosure url="https://github.com/stonerl/Thaw/releases/download/1.0.0-beta.2/Thaw2-1.delta" sparkle:deltaFrom="1" length="787306" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="860560" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="233epzHPTgzEMd9kP3CHNGHUYA7dKc5vAoyo4L/hOArY1cKiyQ9GVujrRRpLkr2J2b+bzDiRsk5nzWuZ8LNfDA=="/>
             </sparkle:deltas>
@@ -55,7 +116,7 @@
             <sparkle:version>1</sparkle:version>
             <sparkle:shortVersionString>1.0.0-beta.1</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <enclosure url="https://github.com/stonerl/Thaw/releases/download/1.0.0-beta.2/Thaw_1.0.0-beta.1.zip" length="3964528" type="application/octet-stream" sparkle:edSignature="oOZHzLIVx35jxRBrfKA1y37GLmAfaKCB1ZE/b0Qt18nLFavzRcbm2WiOe0O8NUk3k/t4RhBdGCZByATw/08xDA=="/>
+            <enclosure url="https://github.com/stonerl/Thaw/releases/download/1.0.0-beta.3/Thaw_1.0.0-beta.1.zip" length="3964528" type="application/octet-stream" sparkle:edSignature="oOZHzLIVx35jxRBrfKA1y37GLmAfaKCB1ZE/b0Qt18nLFavzRcbm2WiOe0O8NUk3k/t4RhBdGCZByATw/08xDA=="/>
             <description><![CDATA[<h3>1.0.0-beta.1: The Big Thaw</h3>
 <ul>
   <li>
