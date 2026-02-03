@@ -493,6 +493,16 @@ final class ControlItem {
             // Running this from a Task seems to improve the visual
             // responsiveness of the status item's button.
             Task {
+                if
+                    event.clickCount > 1,
+                    identifier == .visible,
+                    let alwaysHidden = menuBarManager.section(withName: .alwaysHidden),
+                    alwaysHidden.isEnabled
+                {
+                    alwaysHidden.show()
+                    return
+                }
+
                 if modifierFlags == .control {
                     showMenu()
                     return
