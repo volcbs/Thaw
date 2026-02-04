@@ -77,7 +77,7 @@ struct GeneralSettingsPane: View {
 
     private var showIceIcon: some View {
         Toggle("Show \(Constants.displayName) icon", isOn: $settings.showIceIcon)
-            .annotation("Click to show hidden menu bar items. Right-click to access \(Constants.displayName)'s settings.")
+            .annotation("Click to show hidden or double-click for always-hidden menu bar items. Right-click for \(Constants.displayName)'s settings.")
     }
 
     @ViewBuilder
