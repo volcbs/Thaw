@@ -285,6 +285,14 @@ private struct IceBarContentView: View {
         return menuBarHeight
     }
 
+    private var itemMaxHeight: CGFloat? {
+        guard let contentHeight else {
+            return nil
+        }
+        let availableHeight = contentHeight - verticalPadding * 2
+        return availableHeight > 0 ? availableHeight : nil
+    }
+
     private var clipShape: some InsettableShape {
         if configuration.hasRoundedShape {
             RoundedRectangle(cornerRadius: frame.height / 2, style: .circular)
@@ -360,7 +368,8 @@ private struct IceBarContentView: View {
                             itemManager: itemManager,
                             menuBarManager: menuBarManager,
                             item: item,
-                            section: section
+                            section: section,
+                            maxHeight: itemMaxHeight
                         )
                     }
                 }
@@ -384,6 +393,7 @@ private struct IceBarItemView: View {
 
     let item: MenuBarItem
     let section: MenuBarSection.Name
+    let maxHeight: CGFloat?
 
     private var leftClickAction: () -> Void {
         return { [weak itemManager, weak menuBarManager] in
@@ -426,9 +436,29 @@ private struct IceBarItemView: View {
         return cachedImage.nsImage
     }
 
+    private func targetSize(for image: NSImage) -> CGSize {
+        let intrinsic = image.size
+        guard intrinsic.height > 0 else {
+            return intrinsic
+        }
+
+        guard let maxHeight, maxHeight > 0 else {
+            return intrinsic
+        }
+
+        let clampedHeight = min(maxHeight, intrinsic.height)
+        let scale = clampedHeight / intrinsic.height
+        return CGSize(width: intrinsic.width * scale, height: clampedHeight)
+    }
+
     var body: some View {
         if let image {
+            let size = targetSize(for: image)
             Image(nsImage: image)
+                .interpolation(.high)
+                .antialiased(true)
+                .resizable()
+                .frame(width: size.width, height: size.height)
                 .contentShape(Rectangle())
                 .overlay {
                     IceBarItemClickView(
