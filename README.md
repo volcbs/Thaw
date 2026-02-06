@@ -24,7 +24,7 @@ Thaw is a powerful menu bar management tool. While its primary function is hidin
 
 Download the "Thaw.zip" file from the [latest release](https://github.com/stonerl/Thaw/releases/latest) and move the unzipped app into your `Applications` folder.
 
-### Homebrew (currently not available)
+### Homebrew
 
 Install Thaw using the following command:
 
