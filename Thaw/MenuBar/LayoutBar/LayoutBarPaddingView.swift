@@ -14,10 +14,9 @@ import OSLog
 final class LayoutBarPaddingView: NSView {
     private let container: LayoutBarContainer
     private var isStabilizing = false
-    private let layoutMoveWatchdogTimeout: DispatchTimeInterval = .seconds(6)
 
     private func layoutWatchdogDuration() -> Duration? {
-        switch layoutMoveWatchdogTimeout {
+        switch MenuBarItemManager.layoutWatchdogTimeout {
         case let .seconds(s):
             return .seconds(s)
         case let .milliseconds(ms):
@@ -152,7 +151,7 @@ final class LayoutBarPaddingView: NSView {
                 try await appState.itemManager.move(
                     item: item,
                     to: destination,
-                    watchdogTimeout: layoutMoveWatchdogTimeout
+                    watchdogTimeout: MenuBarItemManager.layoutWatchdogTimeout
                 )
                 appState.itemManager.removeTemporarilyShownItemFromCache(with: item.tag)
                 await stabilizePlacement(of: item, to: destination, expectedSection: container.section, appState: appState)
@@ -194,7 +193,7 @@ final class LayoutBarPaddingView: NSView {
                 try await appState.itemManager.move(
                     item: item,
                     to: destination,
-                    watchdogTimeout: layoutMoveWatchdogTimeout
+                    watchdogTimeout: MenuBarItemManager.layoutWatchdogTimeout
                 )
                 await appState.itemManager.cacheItemsRegardless(skipRecentMoveCheck: true)
             } catch {

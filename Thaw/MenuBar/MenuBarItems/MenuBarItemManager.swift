@@ -69,6 +69,8 @@ actor SimpleSemaphore {
 /// Manager for menu bar items.
 @MainActor
 final class MenuBarItemManager: ObservableObject {
+    static let layoutWatchdogTimeout: DispatchTimeInterval = .seconds(6)
+
     /// The current cache of menu bar items.
     @Published private(set) var itemCache = ItemCache(displayID: nil)
 
@@ -2011,8 +2013,6 @@ private enum MenuBarItemEventType {
 // MARK: Layout Reset
 
 extension MenuBarItemManager {
-    private static let layoutResetWatchdogTimeout: DispatchTimeInterval = .seconds(6)
-
     /// Errors that can occur during a layout reset.
     enum LayoutResetError: LocalizedError {
         case missingAppState
@@ -2106,7 +2106,7 @@ extension MenuBarItemManager {
                     try await move(
                         item: item,
                         to: .leftOfItem(anchor),
-                        watchdogTimeout: Self.layoutResetWatchdogTimeout
+                        watchdogTimeout: Self.layoutWatchdogTimeout
                     )
                 } catch {
                     failed += 1
