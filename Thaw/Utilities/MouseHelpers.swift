@@ -30,6 +30,12 @@ enum MouseHelpers {
         switch interval {
         case let .seconds(s):
             return "\(s)s"
+        case let .milliseconds(ms):
+            return String(format: "%.3fs", Double(ms) / 1000)
+        case let .microseconds(us):
+            return String(format: "%.6fs", Double(us) / 1_000_000)
+        case let .nanoseconds(ns):
+            return String(format: "%.9fs", Double(ns) / 1_000_000_000)
         case .never:
             return "never"
         @unknown default:
