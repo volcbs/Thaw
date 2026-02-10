@@ -238,6 +238,25 @@ final class MenuBarItemManager: ObservableObject {
             }
             .store(in: &c)
 
+        // When Settings reopens with Menu Bar Layout already selected,
+        // settingsNavigationIdentifier does not change, so the subscriber
+        // above does not fire. Observe isSettingsPresented to catch this case.
+        appState.navigationState.$isSettingsPresented
+            .removeDuplicates()
+            .sink { [weak self] isPresented in
+                guard
+                    let self,
+                    isPresented,
+                    appState.navigationState.settingsNavigationIdentifier == .menuBarLayout
+                else {
+                    return
+                }
+                Task {
+                    await self.cacheItemsRegardless()
+                }
+            }
+            .store(in: &c)
+
         cancellables = c
     }
 
