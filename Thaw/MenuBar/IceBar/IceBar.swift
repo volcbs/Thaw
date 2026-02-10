@@ -472,9 +472,13 @@ private struct IceBarItemView: View {
             return intrinsic
         }
 
-        let clampedHeight = min(maxHeight, intrinsic.height)
-        let scale = clampedHeight / intrinsic.height
-        return CGSize(width: intrinsic.width * scale, height: clampedHeight)
+        // Scale to fill the available height exactly. This handles both
+        // directions: shrinking oversized captures (e.g. multi-monitor with
+        // different scale factors) and growing undersized ones (e.g. 16"
+        // MacBook Pro where the captured item height can be smaller than the
+        // IceBar's content height derived from the full notch-area menu bar).
+        let scale = maxHeight / intrinsic.height
+        return CGSize(width: intrinsic.width * scale, height: maxHeight)
     }
 
     var body: some View {
