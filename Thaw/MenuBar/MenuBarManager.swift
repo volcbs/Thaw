@@ -203,8 +203,8 @@ final class MenuBarManager: ObservableObject {
                 let alwaysHiddenSection = self.section(withName: .alwaysHidden)
 
                 // Use isHidden property - when section is shown, isHidden is false
-                let isShowingHiddenSection = hiddenSection != nil && !hiddenSection!.isHidden
-                let isShowingAlwaysHiddenSection = alwaysHiddenSection != nil && !alwaysHiddenSection!.isHidden
+                let isShowingHiddenSection = hiddenSection.map { !$0.isHidden } ?? false
+                let isShowingAlwaysHiddenSection = alwaysHiddenSection.map { !$0.isHidden } ?? false
 
                 if isShowingHiddenSection || isShowingAlwaysHiddenSection {
                     // Use the screen with the active menu bar
